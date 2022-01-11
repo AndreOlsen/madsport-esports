@@ -1,0 +1,50 @@
+// Smartphones
+$screen-min-phone: 100px;
+$screen-max-phone: 575px;
+
+// Smartphones (Landscape View) & Tablets
+$screen-min-tablet: 576px;
+$screen-max-tablet: 799px;
+
+// Desktop
+$screen-min-desktop: 800px;
+$screen-max-desktop: 1300px;
+
+// Smartphones
+@mixin phone {
+	@media (min-width: #{$screen-min-phone}) and (max-width: #{$screen-max-phone}) {
+		@content;
+	}
+}
+
+// Smartphones (Landscape View) & Tablets
+@mixin tablet {
+	@media (min-width: #{$screen-min-tablet}) and (max-width: #{$screen-max-tablet}) {
+		@content;
+	}
+}
+
+// Desktop
+@mixin desktop {
+	@media (min-width: #{$screen-min-desktop}) and (max-width: #{$screen-max-desktop}) {
+		@content;
+	}
+}
+
+// Custom
+@mixin custom($screen) {
+	@media (max-width: $screen+'px') {
+		@content;
+	}
+}
+
+@mixin font-awesome($content, $font-weight: 900) {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: $content;
+}

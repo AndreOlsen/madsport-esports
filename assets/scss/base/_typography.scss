@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yusei+Magic&display=swap');
+
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+	scroll-behavior: smooth;
+
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
+
+	&,
+	body {
+		height: 100%;
+		width: 100%;
+
+		@include custom(940) {
+			overflow-x: hidden;
+		}
+	}
+
+	body {
+		background: $base-color;
+		box-sizing: border-box;
+		color: $base-color-dark;
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.8rem;
+		letter-spacing: -0.015em;
+		text-align: left;
+
+		@include phone {
+			position: relative;
+		}
+
+		&.lock-scroll {
+			overflow: hidden;
+		}
+	}
+}
+
+.banner-heading {
+	font-size: 4em;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+
+	@include phone {
+		font-size: 1.4em;
+	}
+
+	@include tablet {
+		font-size: 2em;
+	}
+
+	@include desktop {
+		font-size: 2.4em;
+	}
+}
+
+.banner-heading-smaller {
+	font-size: 2em;
+	letter-spacing: 0.1em;
+	text-shadow: 3px 2px 1px #222;
+}
+
+.section-heading {
+	font-size: 3em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin: 0 auto;
+	max-width: 1500px;
+	overflow: hidden;
+
+	@include tablet {
+		font-size: 2em;
+	}
+
+	@include phone {
+		font-size: 1.4em;
+	}
+
+	&:before {
+		right: 0.5em;
+		margin-left: -50%;
+	}
+
+	&:after {
+		left: 0.5em;
+		margin-right: -50%;
+	}
+
+	&:before,
+	&:after {
+		background-color: $base-color-dark;
+		content: '';
+		display: inline-block;
+		height: 1px;
+		position: relative;
+		vertical-align: middle;
+		width: 50%;
+	}
+
+	&.white-lines {
+		&:before,
+		&:after {
+			background-color: $base-color;
+		}
+	}
+
+	&.no-lines {
+		&:before,
+		&:after {
+			display: none;
+		}
+
+		@include phone {
+			font-size: 1.2em !important;
+		}
+	}
+}

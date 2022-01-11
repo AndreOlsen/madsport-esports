@@ -1,0 +1,110 @@
+/* CSS Reset
+   ========================================== */
+html,
+body {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td,
+figure {
+	border: none;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	text-align: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+blockquote::before,
+blockquote::after {
+	content: '';
+}
+
+/* Default list
+   ========================================== */
+ul,
+ol {
+	margin: 0 0 3rem 3rem;
+}
+
+ul {
+	list-style: disc;
+}
+
+ul ul {
+	list-style: circle;
+}
+
+ul ul ul {
+	list-style: square;
+}
+
+ol {
+	list-style: decimal;
+}
+
+ol ol {
+	list-style: lower-alpha;
+}
+
+ol ol ol {
+	list-style: lower-roman;
+}
+
+li {
+	line-height: 1.5;
+	margin: 0.5rem 0 0 2rem;
+}
+
+li > ul,
+li > ol {
+	margin: 1rem 0 0 2rem;
+}
+
+.reset-list-style,
+.reset-list-style ul,
+.reset-list-style ol {
+	list-style: none;
+	margin: 0;
+}
+
+.reset-list-style li {
+	margin: 0;
+}

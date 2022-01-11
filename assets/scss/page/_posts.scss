@@ -1,0 +1,98 @@
+/* Posts page
+   ========================================== */
+.posts-items-container {
+	@include custom(1000) {
+		display: block;
+		width: 90%;
+		justify-content: space-around;
+	}
+
+	#hero-post {
+		margin-bottom: 50px;
+
+		.posts-thumbnail img {
+			height: 500px;
+
+			@include phone {
+				height: 200px;
+			}
+
+			@include tablet {
+				height: 400px;
+			}
+		}
+
+		.posts-tagline .posts-title {
+			font-size: 1.5em;
+
+			@include phone {
+				font-size: inherit;
+			}
+		}
+	}
+
+	.posts-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-gap: 1.2em;
+
+		@include custom(1000) {
+			flex-direction: column;
+		}
+
+		.posts-item .posts-thumbnail img {
+			height: 200px;
+
+			@include custom(1000) {
+				height: 250px;
+			}
+
+			@include phone {
+				height: 200px;
+			}
+
+			@include tablet {
+				height: 200px;
+			}
+		}
+	}
+
+	.posts-item {
+		box-shadow: $box-shadow;
+		border-radius: 5px;
+
+		.posts-link {
+			display: block;
+			text-decoration: none;
+			color: $base-color;
+
+			.posts-thumbnail img {
+				width: 100%;
+				border-radius: 5px;
+			}
+
+			.posts-tagline {
+				height: 100px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				padding: 10px;
+
+				.posts-title {
+					color: $base-color-dark-blue;
+				}
+
+				.posts-date {
+					display: block;
+					color: $base-color-grey;
+					font-size: 15px;
+				}
+			}
+		}
+
+		&:hover .posts-title {
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+		}
+	}
+}

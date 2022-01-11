@@ -1,0 +1,81 @@
+/* About page
+   ========================================== */
+.management {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	perspective: 1000px;
+
+	.manager {
+		width: 23%;
+		height: 375px;
+		background: transparent;
+		margin-bottom: 40px;
+
+		@include desktop {
+			height: 300px;
+			width: 22%;
+		}
+
+		@include tablet {
+			height: 250px;
+			width: 40%;
+		}
+
+		@include phone {
+			height: 250px;
+			width: 75%;
+		}
+
+		.manager__inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			transition: transform 0.6s;
+			transform-style: preserve-3d;
+			box-shadow: $box-shadow;
+			border-radius: 100%;
+
+			.manager__inner--front {
+				.profile-picture {
+					width: 100%;
+					min-height: 100%;
+					margin: auto;
+					display: block;
+				}
+			}
+
+			.manager__inner--front,
+			.manager__inner--back {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				backface-visibility: hidden;
+				border-radius: inherit;
+				overflow: hidden;
+			}
+
+			.manager__inner--back {
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $base-color-dark-blue;
+				color: $base-color;
+				transform: rotateY(180deg);
+
+				.title {
+					font-size: 1.5em;
+				}
+			}
+		}
+
+		&:hover .manager__inner {
+			transform: rotateY(180deg);
+		}
+	}
+}

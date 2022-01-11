@@ -1,0 +1,72 @@
+.custom-spacer-50 {
+	height: 50px;
+}
+
+.custom-spacer-100 {
+	height: 100px;
+
+	@include phone {
+		height: 50px;
+	}
+}
+
+.custom-spacer-200 {
+	height: 200px;
+}
+
+.custom-spacer-300 {
+	height: 300px;
+}
+
+.spacer-lighter-dark {
+	background-color: $base-color-dark;
+}
+
+.spacer-dark-blue {
+	background-color: $base-color-dark-blue;
+}
+
+/* Fix banner auto padding in WP 5.5.0 */
+.wp-block-cover {
+	padding-top: 50px;
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+	height: 0;
+}
+
+div.line-spacer {
+	height: 1px;
+	background-color: $base-color-red;
+	margin: 20px auto;
+}
+
+.is-center {
+	margin: 0 auto;
+}
+
+.default-width {
+	max-width: 1500px;
+}
+
+.reading-width {
+	max-width: 1000px;
+}
+
+p.content-text-space {
+	padding: 10px 0;
+}
+
+p.content-text-space a {
+	color: $base-color-red;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+div.wpforms-container-full {
+	padding: 0 20px 20px 20px;
+}

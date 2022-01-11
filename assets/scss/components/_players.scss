@@ -1,0 +1,92 @@
+/* Members 
+   ========================================== */
+.players {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	// @include phone {
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// }
+
+	@include desktop {
+		justify-content: center;
+	}
+
+	.player {
+		position: relative;
+		z-index: 999;
+		// width: 19%;
+
+		// @include phone {
+		// 	margin: 10px 0px;
+		// 	width: 85%;
+		// }
+
+		// @include tablet {
+		// 	width: 33%;
+		// }
+
+		.player__img {
+			position: relative;
+			// width: 100%;
+			// height: auto;
+			z-index: -1;
+			display: block;
+		}
+
+		.player__content {
+			color: $base-color;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.fa-arrows-alt-v {
+				text-align: center;
+				display: block;
+				font-size: 20px;
+				align-self: center;
+				margin-bottom: 10px;
+			}
+
+			.player__name {
+				padding: 5px 10px;
+			}
+
+			.socials-container {
+				padding: 10px 0;
+
+				@include phone {
+					flex-wrap: nowrap;
+				}
+
+				.social-account {
+					padding: 0 10px;
+
+					@include phone {
+						width: 100%;
+						margin-bottom: 0;
+					}
+
+					.social-icon {
+						font-size: 1.5em;
+
+						@include phone {
+							font-size: 2.4em;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.not_front_page .player__content {
+		color: $base-color-dark-blue;
+
+		.social-icon {
+			color: $base-color-dark-blue;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+/*!
+Theme Name: Madsport
+Author: André Olsen
+Author URI: https://www.linkedin.com/in/andre-w-olsen/
+Description: Custom developed theme for Madsport.
+Version: 4.1
+Text Domain: madsport
+*/
+
+@import 'base/normalize';
+
+@import 'base/resets';
+
+@import 'utilities/mixins';
+
+@import 'utilities/variables';
+
+@import 'base/typography';
+
+@import 'base/general';
+
+@import 'layout/header';
+
+@import 'layout/footer';
+
+@import 'components/carousel';
+
+@import 'components/latest-posts';
+
+@import 'components/socials';
+
+@import 'components/players';
+
+@import 'components/management';
+
+@import 'components/widget-socials';
+
+@import 'page/404';
+
+@import 'page/posts';
+
+@import 'page/single-post';

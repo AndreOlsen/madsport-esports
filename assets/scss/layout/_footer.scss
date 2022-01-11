@@ -1,0 +1,43 @@
+/* Footer
+   ========================================== */
+.site-footer {
+	box-shadow: $box-shadow;
+	background-color: $base-color-dark-blue;
+
+	.footer-navigation {
+		display: flex;
+		justify-content: space-around;
+		height: 300px;
+		flex-wrap: wrap-reverse;
+
+		.footer-left-sidebar {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+
+	.copyright-bar {
+		text-align: center;
+		padding: 20px 0;
+		color: $base-color-dark;
+		background-color: $base-color;
+
+		p {
+			@include phone {
+				font-size: 0.6em;
+			}
+		}
+
+		a {
+			color: $base-color-dark-blue;
+			text-decoration: none;
+			font-style: italic;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

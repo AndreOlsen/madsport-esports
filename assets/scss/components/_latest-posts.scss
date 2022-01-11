@@ -1,0 +1,51 @@
+/* Latest posts - CoBlocks plugin required
+   ========================================== */
+.wp-block-coblocks-posts__inner {
+	max-width: 1500px;
+	margin: 0 auto;
+
+	@include phone {
+		align-items: center;
+	}
+
+	.wp-block-coblocks-posts__item {
+		box-shadow: $box-shadow;
+
+		@include phone {
+			width: 85% !important;
+		}
+
+		.wp-block-coblocks-posts__image {
+			transition: all 0.3s ease-in-out;
+
+			&:hover,
+			&:focus {
+				transform: scale(1.05);
+			}
+		}
+
+		.wp-block-coblocks-posts__content {
+			padding: 0 10px 18px 10px;
+			justify-content: space-between;
+			width: auto;
+
+			.wp-block-coblocks-posts__date {
+				margin-bottom: 0.3em;
+			}
+
+			a {
+				color: $base-color-red;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&.has-columns {
+		justify-content: space-evenly;
+	}
+}
